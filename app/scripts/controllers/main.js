@@ -14,7 +14,7 @@ angular.module('sampleAppApp')
             $scope.todos.push($scope.todo);
             $scope.todo = '';
         };
-        $scope.removeTodo = function ($çindex) {
-            $scope.todos.splice('$index', 1)
-        }
+        $scope.removeTodo = function () {
+            $scope.todos.splice('$index', 1);
+        };
     });
