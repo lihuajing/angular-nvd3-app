@@ -8,10 +8,13 @@
  * Controller of the sampleAppApp
  */
 angular.module('sampleAppApp')
-  .controller('MainCtrl', function () {
-    this.awesomeThings = [
-      'HTML5 Boilerplate',
-      'AngularJS',
-      'Karma'
-    ];
-  });
+    .controller('MainCtrl', function ($scope) {
+        $scope.todos = [];
+        $scope.addTodo = function () {
+            $scope.todos.push($scope.todo);
+            $scope.todo = '';
+        };
+        $scope.removeTodo = function ($çindex) {
+            $scope.todos.splice('$index', 1)
+        }
+    });
