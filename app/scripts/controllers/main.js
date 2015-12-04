@@ -2,19 +2,12 @@
 
 /**
  * @ngdoc function
- * @name sampleAppApp.controller:MainCtrl
+ * @name DrChartApp.controller:HomePageCtrl
  * @description
- * # MainCtrl
- * Controller of the sampleAppApp
+ * # HomePageCtrl
+ * Controller of the DrChartApp
  */
-angular.module('sampleAppApp')
-    .controller('MainCtrl', function ($scope) {
-        $scope.todos = [];
-        $scope.addTodo = function () {
-            $scope.todos.push($scope.todo);
-            $scope.todo = '';
-        };
-        $scope.removeTodo = function () {
-            $scope.todos.splice('$index', 1);
-        };
+angular.module('DrChartApp')
+    .controller('HomePageCtrl', function ($scope) {
+
     });

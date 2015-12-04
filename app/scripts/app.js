@@ -9,7 +9,7 @@
  * Main module of the application.
  */
 angular
-    .module('sampleAppApp', [
+    .module('DrChartApp', [
         'ngAnimate',
         'ngAria',
         'ngCookies',
@@ -18,19 +18,30 @@ angular
         'ngRoute',
         'ngSanitize',
         'ngTouch',
-        'ui.sortable'
+        'ui.bootstrap',
+        'ui.sortable',
+        'ui.slider',
+        'ngTable',
+        'ngFileUpload'
     ])
     .config(function ($routeProvider) {
         $routeProvider
             .when('/', {
-                templateUrl: 'views/main.html',
-                controller: 'MainCtrl',
-                controllerAs: 'main'
+                templateUrl: 'views/template/common/page.html',
+                headerUrl: 'views/template/common/header.html',
+                mainUrl: 'views/homePage/page/main.html',
+                footerUrl: 'views/template/common/footer.html',
+                controller: 'HomePageCtrl',
+                controllerAs: 'HomePage'
             })
-            .when('/about', {
-                templateUrl: 'views/about.html',
-                controller: 'AboutCtrl',
-                controllerAs: 'about'
+            .when('/:chartName', {
+                templateUrl: 'views/template/common/page.html',
+                headerUrl: 'views/template/common/header.html',
+                sidebarUrl: 'views/templte/common/sidebar.html',
+                mainUrl: 'views/chartPage/page/main.html',
+                footerUrl: 'views/template/common/footer.html',
+                controller: 'ChartPageCtrl',
+                controllerAs: 'ChartPage'
             })
             .otherwise({
                 redirectTo: '/'
